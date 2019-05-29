@@ -16,13 +16,13 @@ namespace PhramaCare
         public Form1()
         {
             SqlConnection sql = new SqlConnection();
-            sql.ConnectionString = "server=31.147.204.119\PISERVER,1433;database=TeamE5_DB;uid=TeamE5_User;pwd=9Gz_+GX8";
+            sql.ConnectionString = "Server=31.147.204.119;"+"Database=TeamE5_DB;"+"uid=TeamE5_User;"+"pwd=9Gz_+GX8";
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection sql = new SqlConnection("server=31.147.204.119\PISERVER,1433;database=TeamE5_DB;uid=TeamE5_User;pwd=9Gz_+GX8");
+            SqlConnection sql = new SqlConnection("Server=31.147.204.119;" + "Database=TeamE5_DB;" + "uid=TeamE5_User;" + "pwd=9Gz_+GX8");
             sql.Open();
         }
 
@@ -38,22 +38,20 @@ namespace PhramaCare
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("Nice try");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine("L2");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SqlConnection sql = new SqlConnection();
-            sql.ConnectionString = "server=31.147.204.119\PISERVER,1433;database=TeamE5_DB;uid=TeamE5_User;pwd=9Gz_+GX8";
+            sql.ConnectionString = "Server = 31.147.204.119; "+"Database = TeamE5_DB; "+"uid = TeamE5_User; "+"pwd = 9Gz_+GX8";
             sql.Open();
             string userid = textBox1.Text;
             string password = textBox2.Text;
-            SqlCommand cmd = new SqlCommand("select userid,password from users where userid='" + textBox1.Text + "'and password'" + textBox2.Text + "'", sql);
+            SqlCommand cmd = new SqlCommand("select user_id,password from users where user_id='" + textBox1.Text + "'and password='" + textBox2.Text + "'", sql);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
