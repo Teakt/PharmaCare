@@ -25,6 +25,13 @@ namespace PhramaCare
             }
         }
 
+        private void ShowForm(Form frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
+
         public Register()
         {
             InitializeComponent();
@@ -57,7 +64,7 @@ namespace PhramaCare
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowForm(MDIContainer.Instance);
         }
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
