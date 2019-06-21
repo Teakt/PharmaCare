@@ -13,6 +13,19 @@ namespace PhramaCare
 {
     public partial class Form1 : Form
     {
+        private static Form1 _instance;
+
+        public static Form1 Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Form1();
+                return _instance;
+
+            }
+        }
+
         public Form1()
         {
             SqlConnection sql = new SqlConnection();
@@ -70,6 +83,11 @@ namespace PhramaCare
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
         }
     }
 }

@@ -14,10 +14,25 @@ namespace PhramaCare
 {
     public partial class Register : Form
     {
+
         
         string ConnectionString = "Server = 31.147.204.119; "+"Database = TeamE5_DB; "+"uid = TeamE5_User; "+"pwd = 9Gz_+GX8";
         
        
+
+        private static Register _instance;
+
+        public static Register Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Register();
+                return _instance;
+
+            }
+        }
+
 
         public Register()
         {
@@ -53,6 +68,7 @@ namespace PhramaCare
         {
 
         }
+
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -125,6 +141,10 @@ namespace PhramaCare
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
 
         }
     }
