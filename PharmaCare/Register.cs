@@ -12,6 +12,19 @@ namespace PhramaCare
 {
     public partial class Register : Form
     {
+        private static Register _instance;
+
+        public static Register Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Register();
+                return _instance;
+
+            }
+        }
+
         public Register()
         {
             InitializeComponent();
@@ -45,6 +58,11 @@ namespace PhramaCare
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
         }
     }
 }
