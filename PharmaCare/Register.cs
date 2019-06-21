@@ -93,6 +93,7 @@ namespace PhramaCare
         private void buttonRegister_Click(object sender, EventArgs e)
         {
 
+            
             if (txtusername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Please fill the Username and the Password !");
@@ -101,27 +102,48 @@ namespace PhramaCare
             {
                 MessageBox.Show("Passwords don't match !");
             }
+            
             else
             {
                 using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
                 {
 
+                    bool exists = false;
+                    SqlCommand all_users = new SqlCommand("select count(*) from [TeamE5_DB].[dbo].[Users] where user_id='" + txtusername.Text + "'", sqlCon);
+                    all_users.Parameters.AddWithValue("@user_id", txtusername.Text.Trim());
+
 
 
                     sqlCon.Open();
-                    //..
-                    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@user_id", txtusername.Text.Trim()); // ALLOWS TO ADD USER ID ON DATABASE WEBDIIIP
-                    sqlCmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@mail", txtMail.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@IDnumber", txtIDnumber.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@phonenumber", txtPhonenumber.Text.Trim());
-                    sqlCmd.ExecuteNonQuery(); // Executes a Transact-SQL statement against the connection and returns the number of rows affected.
+                    var result = all_users.ExecuteScalar();
+                    //MessageBox.Show(result.ToString());
 
-                    MessageBox.Show(" WELL PLAYED ! REGISTRATION SUCCESSFUL ! WELCOME TO PHARMACARE !");
-                    Clear();
+
+
+                    exists = (int)all_users.ExecuteScalar() > 0;
+
+                    if (exists)
+                    {
+                           MessageBox.Show(string.Format("Username {0} already exist", txtusername.Text));
+                    }
+                  
+                    else
+                    {
+                        //..
+                        SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@user_id", txtusername.Text.Trim()); // ALLOWS TO ADD USER ID ON DATABASE WEBDIIIP
+                        sqlCmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@mail", txtMail.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@IDnumber", txtIDnumber.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@phonenumber", txtPhonenumber.Text.Trim());
+                        sqlCmd.ExecuteNonQuery(); // Executes a Transact-SQL statement against the connection and returns the number of rows affected.
+
+                        MessageBox.Show(" WELL PLAYED ! REGISTRATION SUCCESSFUL ! WELCOME TO PHARMACARE !");
+                        Clear();
+                    }
+                   
                 }
             }
 
@@ -141,6 +163,7 @@ namespace PhramaCare
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+        }
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
         {
