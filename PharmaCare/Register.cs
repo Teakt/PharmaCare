@@ -141,6 +141,7 @@ namespace PhramaCare
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+        }
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
         {
