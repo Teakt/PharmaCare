@@ -34,6 +34,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // button1
@@ -98,6 +99,14 @@
             this.label2.Text = "Password";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(796, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -109,10 +118,13 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.LoginIn);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Form1";
             this.Text = "Login Form";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,6 +139,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button LoginIn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
