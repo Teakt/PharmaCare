@@ -62,6 +62,7 @@ namespace PhramaCare
                     //int columnValue = Convert.ToInt32(myReader['condition']);
                     string Symptom_name = myReader["condition"].ToString();
                     comboBox1.Items.Add(Symptom_name);
+
                 }
 
                 sqlCon.Close();
