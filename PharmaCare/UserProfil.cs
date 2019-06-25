@@ -16,6 +16,26 @@ namespace PhramaCare
 
         string ConnectionString = "Server = 31.147.204.119; " + "Database = TeamE5_DB; " + "uid = TeamE5_User; " + "pwd = 9Gz_+GX8";
 
+        private static UserProfil _instance;
+
+        public static UserProfil Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new UserProfil();
+                return _instance;
+
+            }
+        }
+
+        private void ShowForm(Form frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
+
         public UserProfil()
         {
             InitializeComponent();
@@ -189,6 +209,16 @@ namespace PhramaCare
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void UserProfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ShowForm(AlgoMedics.Instance);
         }
     }
 }

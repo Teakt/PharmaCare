@@ -157,11 +157,17 @@ namespace PhramaCare
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ShowForm(UserProfil.Instance);
+        }
+
         private void AlgoMedics_FormClosed(object sender, FormClosedEventArgs e)
         {
             _instance = null;
         }
 
+        
     }
 
 }
