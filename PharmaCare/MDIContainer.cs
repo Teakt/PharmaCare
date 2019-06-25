@@ -17,12 +17,24 @@ namespace PhramaCare
             InitializeComponent();
         }
 
+        private static MDIContainer _instance;
+
+        public static MDIContainer Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new MDIContainer();
+                return _instance;
+
+            }
+        }
+
         private void ShowForm(Form frm)
         {
-
-            frm.MdiParent = this;
             frm.Show();
             frm.Activate();
+            this.Hide();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +50,26 @@ namespace PhramaCare
         private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ShowForm(Form1.Instance);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MDIContainer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowForm(Form1.Instance);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ShowForm(Register.Instance);  
         }
     }
 }

@@ -26,6 +26,13 @@ namespace PhramaCare
             }
         }
 
+        private void ShowForm(Form frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
+
         public Form1()
         {
             SqlConnection sql = new SqlConnection();
@@ -80,6 +87,7 @@ namespace PhramaCare
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Login success");
+                ShowForm(AlgoMedics.Instance);
                 //System.Diagnostics.Process.Start();
             }
             else
@@ -91,7 +99,7 @@ namespace PhramaCare
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ShowForm(MDIContainer.Instance);
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

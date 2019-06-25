@@ -31,8 +31,10 @@ namespace PhramaCare
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MDIContainer());
+
             Application.Run(new AlgoMedics());
             Application.Run(new UserProfil());
+
         }
     }
 }
