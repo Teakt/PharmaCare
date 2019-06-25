@@ -78,6 +78,7 @@ namespace PhramaCare
             if (dt.Rows.Count > 0)
             {
                 MessageBox.Show("Login success");
+                ShowForm(AlgoMedics.Instance);
                 //System.Diagnostics.Process.Start();
             }
             else
