@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TeamE5_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UserProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfil.Designer.cs">
+      <DependentUpon>UserProfil.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AlgoMedics.resx">
       <DependentUpon>AlgoMedics.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfil.resx">
+      <DependentUpon>UserProfil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

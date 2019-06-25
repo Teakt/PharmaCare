@@ -62,7 +62,16 @@ namespace PhramaCare
             SqlConnection sql = new SqlConnection();
             sql.ConnectionString = "Server = 31.147.204.119; "+"Database = TeamE5_DB; "+"uid = TeamE5_User; "+"pwd = 9Gz_+GX8";
             sql.Open();
+
+            
+
             string userid = textBox1.Text;
+            // HERE WE SET THE GLOBAL USER ID
+
+            Connexion.User_id = userid;
+            
+
+
             string password = textBox2.Text;
             SqlCommand cmd = new SqlCommand("select user_id,password from users where user_id='" + textBox1.Text + "'and password='" + textBox2.Text + "'", sql);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
