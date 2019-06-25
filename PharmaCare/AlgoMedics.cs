@@ -16,6 +16,25 @@ namespace PhramaCare
 
         string ConnectionString = "Server = 31.147.204.119; " + "Database = TeamE5_DB; " + "uid = TeamE5_User; " + "pwd = 9Gz_+GX8";
 
+        private static AlgoMedics _instance;
+
+        public static AlgoMedics Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new AlgoMedics();
+                return _instance;
+
+            }
+        }
+
+        private void ShowForm(Form frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
 
         public AlgoMedics()
         {
@@ -86,6 +105,12 @@ namespace PhramaCare
         {
 
         }
+
+        private void AlgoMedics_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
+        }
+
     }
 
 }

@@ -16,7 +16,7 @@ namespace PhramaCare
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AlgoMedics());
+            Application.Run(new MDIContainer());
         }
     }
 }
