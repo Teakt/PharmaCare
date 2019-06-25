@@ -13,6 +13,25 @@ namespace PhramaCare
 {
     public partial class AlgoMedics : Form
     {
+        private static AlgoMedics _instance;
+
+        public static AlgoMedics Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new AlgoMedics();
+                return _instance;
+
+            }
+        }
+
+        private void ShowForm(AlgoMedics frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
 
         string ConnectionString = "Server = 31.147.204.119; " + "Database = TeamE5_DB; " + "uid = TeamE5_User; " + "pwd = 9Gz_+GX8";
 
@@ -83,6 +102,31 @@ namespace PhramaCare
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlgoMedics_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instance = null;
+        }
+
+        private void AlgoMedics_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
