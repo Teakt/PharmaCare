@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(124, 36);
+            this.txtName.Location = new System.Drawing.Point(142, 36);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 22);
             this.txtName.TabIndex = 0;
@@ -84,7 +85,7 @@
             // txtusername
             // 
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.Location = new System.Drawing.Point(124, 190);
+            this.txtusername.Location = new System.Drawing.Point(142, 190);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(100, 22);
             this.txtusername.TabIndex = 2;
@@ -102,7 +103,7 @@
             // txtIDnumber
             // 
             this.txtIDnumber.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDnumber.Location = new System.Drawing.Point(124, 92);
+            this.txtIDnumber.Location = new System.Drawing.Point(142, 92);
             this.txtIDnumber.Name = "txtIDnumber";
             this.txtIDnumber.Size = new System.Drawing.Size(100, 22);
             this.txtIDnumber.TabIndex = 6;
@@ -121,7 +122,7 @@
             // txtMail
             // 
             this.txtMail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.Location = new System.Drawing.Point(124, 64);
+            this.txtMail.Location = new System.Drawing.Point(142, 64);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(100, 22);
             this.txtMail.TabIndex = 4;
@@ -140,7 +141,7 @@
             // txtPhonenumber
             // 
             this.txtPhonenumber.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhonenumber.Location = new System.Drawing.Point(124, 120);
+            this.txtPhonenumber.Location = new System.Drawing.Point(142, 120);
             this.txtPhonenumber.Name = "txtPhonenumber";
             this.txtPhonenumber.Size = new System.Drawing.Size(100, 22);
             this.txtPhonenumber.TabIndex = 8;
@@ -159,7 +160,7 @@
             // buttonRegister
             // 
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegister.Location = new System.Drawing.Point(336, 326);
+            this.buttonRegister.Location = new System.Drawing.Point(157, 294);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(75, 23);
             this.buttonRegister.TabIndex = 11;
@@ -169,8 +170,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.buttonRegister);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtConfirmPasswd);
@@ -189,7 +191,7 @@
             this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(198, 29);
+            this.groupBox1.Location = new System.Drawing.Point(930, 273);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(369, 364);
             this.groupBox1.TabIndex = 12;
@@ -211,7 +213,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(230, 221);
+            this.label10.Location = new System.Drawing.Point(266, 221);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(12, 13);
             this.label10.TabIndex = 16;
@@ -221,7 +223,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(230, 193);
+            this.label9.Location = new System.Drawing.Point(266, 193);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(12, 13);
             this.label9.TabIndex = 15;
@@ -231,7 +233,7 @@
             // txtConfirmPasswd
             // 
             this.txtConfirmPasswd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPasswd.Location = new System.Drawing.Point(124, 246);
+            this.txtConfirmPasswd.Location = new System.Drawing.Point(142, 246);
             this.txtConfirmPasswd.Name = "txtConfirmPasswd";
             this.txtConfirmPasswd.Size = new System.Drawing.Size(100, 22);
             this.txtConfirmPasswd.TabIndex = 13;
@@ -241,7 +243,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 249);
+            this.label8.Location = new System.Drawing.Point(28, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 13);
             this.label8.TabIndex = 14;
@@ -251,7 +253,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(124, 218);
+            this.txtPassword.Location = new System.Drawing.Point(142, 218);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 11;
@@ -270,7 +272,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(294, 470);
+            this.button2.Location = new System.Drawing.Point(1054, 659);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 23);
             this.button2.TabIndex = 11;
@@ -282,9 +284,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.groupBox1);
             this.Name = "Register";
             this.Text = "User Register Interface";

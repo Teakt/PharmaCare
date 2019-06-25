@@ -72,7 +72,7 @@ namespace PhramaCare
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowForm(Form1.Instance);
         }
 
 
