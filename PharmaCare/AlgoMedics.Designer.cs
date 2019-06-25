@@ -103,15 +103,9 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "ID / Drug\'s Name / Rating (0-10)";
             // 
-            // button1
+            // button1  CI GIT LE BOUTON DE FDP QU A CREER MARKO , ON LA BRULER CET HERETIQUE , REJOINS TON FRERE LA BRANCHE INTERFACE1 ENCULER
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1293, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 54);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Profile Page";
-            this.button1.UseVisualStyleBackColor = true;
+            
             // 
             // label4
             // 
@@ -159,7 +153,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+       
         private System.Windows.Forms.Label label4;
 
     }
