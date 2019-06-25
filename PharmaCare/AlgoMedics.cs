@@ -82,7 +82,7 @@ namespace PhramaCare
 
                 SqlCommand allowed_drugs = new SqlCommand(Query, sqlCon);
                 SqlDataReader myReader;
-
+                listBox1.Items.Clear();
                 sqlCon.Open();
                 myReader = allowed_drugs.ExecuteReader();
 
