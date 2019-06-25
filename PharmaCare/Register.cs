@@ -33,6 +33,12 @@ namespace PhramaCare
             }
         }
 
+        private void ShowForm(Form frm)
+        {
+            frm.Show();
+            frm.Activate();
+            this.Hide();
+        }
 
         public Register()
         {
@@ -66,7 +72,7 @@ namespace PhramaCare
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowForm(Form1.Instance);
         }
 
 
