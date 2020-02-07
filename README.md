@@ -9,8 +9,6 @@ Our team is composed by :
   -KLOBUCAR Marko
   
   -TEAK Guillaume
-  
-  -CURIC Luka
 
 ## Status of our project 
 
